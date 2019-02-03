@@ -1,0 +1,17 @@
+@import "../variables";
+
+h2.title {
+    
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    
+    @media screen and (max-width: $max-width-mobile) {
+      font-size: 1.25rem;            
+    }
+
+    @media screen and (min-width: $min-width-desktop) {
+      font-size: 1.75rem;
+    }
+
+}

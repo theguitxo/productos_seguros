@@ -1,0 +1,100 @@
+<div class="row mt-2">
+  <div class="col-12">
+
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <div>Producto</div>
+            <div class="row m-0">
+              <div class="col-6 text-left m-0 p-0">
+                <fa-icon [icon]="faSortUp" (click)="callOrderData('name', 'ASC')"></fa-icon>
+              </div>
+              <div class="col-6 text-right m-0 p-0">
+                <fa-icon [icon]="faSortDown" (click)="callOrderData('name', 'DESC')"></fa-icon>
+              </div>
+            </div>
+          </th>
+          <th>
+            <div>Marca</div>
+            <div class="row m-0">
+              <div class="col-6 text-left m-0 p-0">
+                <fa-icon [icon]="faSortUp" (click)="callOrderData('brand', 'ASC')"></fa-icon>
+              </div>
+              <div class="col-6 text-right m-0 p-0">
+                <fa-icon [icon]="faSortDown" (click)="callOrderData('brand', 'DESC')"></fa-icon>
+              </div>
+            </div>
+          </th>
+          <th>
+            <div>Tipo</div>
+            <div class="row m-0">
+              <div class="col-6 text-left m-0 p-0">
+                <fa-icon [icon]="faSortUp" (click)="callOrderData('kind', 'ASC')"></fa-icon>
+              </div>
+              <div class="col-6 text-right m-0 p-0">
+                <fa-icon [icon]="faSortDown" (click)="callOrderData('kind', 'DESC')"></fa-icon>
+              </div>
+            </div>
+          </th>
+          <th *ngIf="!favoritesList">
+            <div>Precio</div>
+            <div class="row m-0">
+              <div class="col-6 text-left m-0 p-0">
+                <fa-icon [icon]="faSortUp" (click)="callOrderData('price', 'ASC')"></fa-icon>
+              </div>
+              <div class="col-6 text-right m-0 p-0">
+                <fa-icon [icon]="faSortDown" (click)="callOrderData('price', 'DESC')"></fa-icon>
+              </div>
+            </div>
+          </th>
+          <th>
+          </th>
+
+        </tr>
+      </thead>
+      <tr 
+        *ngFor="let i of data.slice(init, finish); let idx = index; let odd = odd; let even = even"
+        [ngClass]= "{ 'even' : even, 'odd' : odd }">
+        <td class="text-left m40">
+          {{i.name}}
+        </td>
+        <td class="text-center m10">
+          <img class="ico-list white" src="assets/images/{{i.brandImage}}" [alt]="i.brand" [title]="i.brand">
+        </td>
+        <td class="text-center m10">
+          <img class="ico-list" src="assets/images/{{i.kindImage}}" [alt]="i.kind" [title]="i.kind">
+        </td>
+        <td class="text-right m20" *ngIf="!favoritesList">
+          {{i.price | currency:'EUR':'symbol'}}
+        </td>
+        <td class="text-center px-2 m10">
+          <fa-icon 
+            [icon]="iconFavorites()" 
+            [ngClass]="{'favorite': i.favorite && !favoritesList}"
+            (click)="executeLineAction(i.id)"></fa-icon>
+        </td>
+      </tr>
+      <tr *ngIf="!favoritesList">
+        <td colspan="5" class="text-right pr-1">
+          <fa-icon [icon]="faStar"></fa-icon> = Añadir a favoritos
+          <br />
+          <fa-icon [icon]="faStar" class="favorite"></fa-icon> = Eliminar de favoritos
+        </td>
+      </tr>
+      <tr *ngIf="favoritesList">
+        <td colspan="4" class="text-right pr-1">
+          <fa-icon [icon]="faTrash"></fa-icon> = Eliminar de favoritos
+        </td>
+      </tr>
+    </table>
+
+  </div>
+</div>
+<!--
+<div class="row mb-2 table-info" *ngIf="!favoritesList">
+  <div class="col-12 text-right">
+    <fa-icon [icon]="faStar"></fa-icon> = Añadir a favoritos / <fa-icon [icon]="faStar" class="favorite"></fa-icon> = Eliminar de favoritos
+  </div>
+</div>
+-->

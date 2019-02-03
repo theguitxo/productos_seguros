@@ -1,0 +1,44 @@
+<div class="row m-2">
+  <div class="col-12 text-center">
+    <div class="btn-group" role="group">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        [disabled]="page === 1" 
+        (click)="goToPage(1)">
+        &lt;&lt;
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        [disabled]="page === 1" 
+        (click)="goToPage(page - 1)">
+        &lt;
+      </button>
+      <button
+        type="button"
+        class="btn"
+        [disabled]="page === i" 
+        [ngClass]="{'btn-primary': page === i,
+          'btn-secondary': page !== i}" 
+        *ngFor="let i of pageButtons"
+        (click)="goToPage(i)">
+        {{i}}
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        [disabled]="page === numPages" 
+        (click)="goToPage(page + 1)">
+        &gt;
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        [disabled]="page === numPages" 
+        (click)="goToPage(numPages)">
+        &gt;&gt;
+      </button>
+    </div>
+  </div>
+</div>

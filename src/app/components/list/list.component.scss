@@ -1,0 +1,43 @@
+fa-icon {
+  cursor: pointer;
+  &.favorite {
+    color: #ffff99;
+  }
+}
+
+table {
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  
+  th {
+    text-align: center;
+    padding: 0.5rem;    
+  }
+  td.m40 {
+    width: 40%;
+  }
+  td.m10 {
+    width: 10%;
+  }
+  td.m20 {
+    width: 20%;
+  }
+  tr.odd {
+    background-color: rgba(153, 153, 204, 0.5);
+  }
+  tr.even {
+    background-color: rgba(153, 204, 204, 0.5);
+  }
+}
+
+img.ico-list {
+  width: 32px;
+  height: 32px;
+}
+
+img.white {
+  background-color: #fff;
+}

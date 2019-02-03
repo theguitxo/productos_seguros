@@ -1,0 +1,39 @@
+<div class="row m-2">
+  <div class="col-12 text-right">
+    <fa-icon       
+      title="Cerrar"
+      [icon]="faTimesCircle" 
+      (click)="closeFavorites()"></fa-icon>
+  </div>
+</div>
+
+<app-options-filter
+    [brands]="getBrands()"
+    [types]="getTypes()"
+    [favorites]="true"
+    (filter)="executeFilter($event)">
+</app-options-filter>
+
+<app-messages-box *ngIf="!data.length" type="info" message="¡No hay favoritos!">
+</app-messages-box>
+
+<ng-container
+  *ngIf="data.length">
+
+  <app-list
+    [data]="data"
+    [page]="page"
+    [forPage]="5"
+    [favoritesList]="true"
+    (orderData)="orderData($event)"
+    (lineAction)="removeFavorite($event)">
+  </app-list>
+
+  <app-paginator
+    [page]="page"
+    [numItems]="data.length"
+    [forPage]="5"
+    (changePage)="changePage($event)">
+  </app-paginator>
+
+</ng-container>

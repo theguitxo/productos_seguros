@@ -1,0 +1,16 @@
+:host {
+  width: 90vw;
+  margin: 0.5rem auto;
+  background-color: white;
+  border-radius: .5rem;
+  padding: .5rem;
+
+  overflow: hidden;
+  overflow-y: auto;
+  
+}
+
+fa-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}

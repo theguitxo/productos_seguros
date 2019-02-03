@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    @media screen and (max-width: $max-width-mobile) {
+        font-size: 0.85rem !important;
+    }
+    @media screen and (min-width: $min-width-desktop) {
+        font-size: 1rem !important;
+    }
+    
+}

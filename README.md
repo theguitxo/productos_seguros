@@ -1,27 +1,33 @@
-# Insurance
+# Seguros - Lista de productos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
+## Descripción
 
-## Development server
+Esta aplicación muestra una lista de productos para seguros y permite filtrarlos a partir de los valores para nombre, marca, tipo y precio.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Instalación
 
-## Code scaffolding
+Se ha de clonar el proyecto, mediante Git, usando la orden:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`git clone https://github.com/theguitxo/productos_seguros.git`
 
-## Build
+O descargar el fichero ZIP y descomprimir su contenido.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+En la carpeta donde se haya ubicado la aplicación se ha de ejecutar la instalación de paquetes:
 
-## Running unit tests
+`npm i`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Ejecutar el entorno de desarrollo y la aplicación
 
-## Running end-to-end tests
+Para iniciar el entorno de desarrollo se ha de ejecutar la orden:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+`ng serve`
 
-## Further help
+Se inicia un servidor donde se aloja la aplicación en modo de desarrollo, pudiendose acceder a ella introduciendo la siguiente dirección en el navegador:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`http://localhost:4200`
+
+## Entorno de producción
+
+En caso de no poder descargar ficheros o clonar el proyecto, se dispone de una versión de distribución de la aplicación en la siguiente dirección:
+
+[`http://productosseguros.guitxo.com`](http://productosseguros.guitxo.com)
