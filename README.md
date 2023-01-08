@@ -30,4 +30,4 @@ Se inicia un servidor donde se aloja la aplicación en modo de desarrollo, pudie
 
 En caso de no poder descargar ficheros o clonar el proyecto, se dispone de una versión de distribución de la aplicación en la siguiente dirección:
 
-[`http://productosseguros.guitxo.com`](http://productosseguros.guitxo.com)
+[https://theguitxo.github.io/productos_seguros/](https://theguitxo.github.io/productos_seguros/)
